@@ -31,11 +31,13 @@
 	<form action="../clients/profile">
 		Add this Billing Contact to Client ID: <input type="text">
 	<input type="submit"><br></form>
-
 	Current Clients:
+
+
 	<br>
 	@foreach($billing_index as $billing_index_opt)
 		<ul>
+
 			{{link_to_route('clientProfilelookup', $billing_index_opt->business_name, array('client_id' => $billing_index_opt->client_id));}}
 			
 
@@ -43,5 +45,3 @@
 	@endforeach
 
 @stop
-billing_profile<br>
-For Displaying billing stuff<br>

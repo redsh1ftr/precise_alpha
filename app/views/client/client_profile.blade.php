@@ -4,23 +4,22 @@
 
 
 
-@foreach($clientlist as $clientlist2)
+
 <h1>
-{{ $clientlist2->business_name }}
+{{ $clientlist->business_name }}
 </h1>
 	<h2>
-	Client ID:	{{	$clientlist2 ->client_id	}}
+	Client ID:	{{	$clientlist ->client_id	}}
 		<br>
-	Business Type:	{{	$clientlist2->business_type	}}
+	Business Type:	{{	$clientlist->business_type	}}
 		<br>
-	Current Job Number:	{{	$clientlist2->current_job_number	}}
+	Current Job Number:	{{	$clientlist->current_job_number	}}
 		<br>
 		Purchase Order Counter
 		<br>
-		{{	$clientlist2->net_terms	}}
+		{{	$clientlist->net_terms	}}
 		<br>
 	</h2>
-@endforeach
 
 
 
@@ -32,7 +31,7 @@
 
 @foreach($billingcompanies as $billinglist)
 	<ul>
-    {{link_to('billing/profile/'.urlencode($billinglist->id), $billinglist->billing_company, array('billing_company' => $billinglist->billing_company));}}
+    {{link_to('billing/profile/'.urlencode($billinglist->billing_id), $billinglist->billing_company, array('billing_id' => $billinglist->billing_id));}}
     <br>
 	{{$billinglist->first_name}} {{$billinglist->last_name}}
 	<br>
@@ -132,7 +131,7 @@ notes notes notes notesnotenotesnotes
 		Work Orders:
 	</h2>
 	<h3>
-		<form action="../work_order/new">
+		<form action="work_order/new">
 			New Work Order
 		<input type="submit"></form>
 
@@ -169,5 +168,3 @@ notes notes notes notesnotenotesnotes
 
 @stop
 
-<h2>client_profile<br>
-	For displaying client info and creating work orders<br> ALMOST EVERYTHING HAPPENS HERE.

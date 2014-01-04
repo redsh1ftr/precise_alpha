@@ -50,7 +50,7 @@
 	</style>
 </head>
 <body>
-	<h3>	<form action="../PA1/precise_alpha/">
+	<h3>	<form action="/PA1/precise_alpha/public/clients/profile/id">
 		Lookup Client Number: 	<input type="text" name = "client_id">
 	<input type="submit"></form></h3>
 	<div class="welcome">

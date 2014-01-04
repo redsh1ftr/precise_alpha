@@ -43,7 +43,7 @@ Route::get('billing', array('uses' => 'BillingController@billingLookup'));
 
 Route::get('billing/new', array('uses' => 'BillingController@billingCreate'));
 
-Route::get('billing/profile/{id}', array('as' => 'myRoute', 'uses' => 'BillingController@billingProfilelink'));
+Route::get('billing/profile/{client_id}', array('as' => 'myRoute', 'uses' => 'BillingController@billingProfilelink'));
 
 //purchase order routes
 Route::get('purchase_order', array('uses' => 'PurchaseOrderController@purchase_orderLookup'));
