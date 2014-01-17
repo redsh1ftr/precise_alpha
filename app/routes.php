@@ -20,7 +20,8 @@ Route::get('/', function()
 
 Route::get('/main', function()
 {
-	return View::make('main.main');
+	return View::make('main.main')
+	->with('pagetitle', 'Main Hub');
 });
 
 //client routes
@@ -45,6 +46,8 @@ Route::get('billing/new', array('uses' => 'BillingController@billingCreate'));
 
 Route::get('billing/profile/{client_id}', array('as' => 'myRoute', 'uses' => 'BillingController@billingProfilelink'));
 
+Route::get('billing/profile/id', array('as' => 'IDRoute', 'uses' => 'BillingController@billingLookup'));
+
 //purchase order routes
 Route::get('purchase_order', array('uses' => 'PurchaseOrderController@purchase_orderLookup'));
 
@@ -55,9 +58,12 @@ Route::get('purchase_order/profile', array('uses' => 'PurchaseOrderController@pu
 //work order routes
 Route::get('work_order', array('uses' => 'WorkOrderController@work_orderLookup'));
 
-Route::get('work_order/new', array('uses' => 'WorkOrderController@work_orderCreate'));
-
 Route::get('work_order/profile', array('uses' => 'WorkOrderController@work_orderProfile'));
+
+//from client view
+Route::get('/clients/profile/work_order/new', array('uses' => 'WorkOrderController@work_orderCreate'));
+
+
 
 
 //worksite routes

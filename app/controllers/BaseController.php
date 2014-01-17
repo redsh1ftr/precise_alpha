@@ -16,8 +16,3 @@ class BaseController extends Controller {
 	}
 
 }
-
-$client_id1 = Input::get('client_id');
-$businesstest1 = DB::table('clientlists')->where('client_id', '=', $client_id1)->pluck('business_name');
-$client_id = DB::table('clientlists')->where('client_id', '=', $client_id1)->pluck('client_id');
-

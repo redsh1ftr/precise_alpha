@@ -36,7 +36,7 @@ class BillingController extends BaseController {
 
 //make sure there's data there
 $checkid = DB::table('billing_contact_list')->where('billing_company', '=', $billing_company)->pluck('id');
-return View::make('billing.billing_profile',  array('pagetitle', 'Client Hub'))
+return View::make('billing.billing_profile',  array('pagetitle', 'Billing Hub'))
 //models for Client ID search
 			->with('billing_contact', Billing1::findorFail($billing_company))//get all the client data
 			->with('billingcompanies', Billingindex::where('billing_company', '=', $billing_company)->get());
@@ -50,14 +50,13 @@ return View::make('billing.billing_profile',  array('pagetitle', 'Client Hub'))
 
 	public function billingProfilelink($billing_id)
 {
-
-
 //make sure there's data there
 $checkid = DB::table('billing_index')->where('billing_id', '=', $billing_id)->pluck('billing_id');
-return View::make('billing.billing_profile',  array('pagetitle', 'Client Hub'))
+return View::make('billing.billing_profile',  array('pagetitle', 'Billing Hub'))
 //models for Billing ID link
 			->with('billing_contact', Billing1::find($checkid))//get all the client data
-			->with('billing_index', Billingindex::where('billing_id', '=', $billing_id)->get());
+			->with('billing_index', Billingindex::where('billing_id', '=', $billing_id)->get())
+			->with('pagetitle', 'Billing Hub');
 
 }}
 

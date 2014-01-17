@@ -55,7 +55,7 @@
 
 
 
-
+	<a href = ".../billing">Add Billing Contact</a>
 	<form action="../billing">
 		Add another billing contact to client
 	<input type="submit"><br></form>

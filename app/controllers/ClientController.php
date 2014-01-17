@@ -23,10 +23,11 @@ public function clientProfilelookup($client_id){
 //$getid = Input::get('client_id');
 //make sure there's data there
 $checkid = DB::table('clientlists')->where('client_id', '=', $client_id)->pluck('id');
-return View::make('client.client_profile',  array('pagetitle', 'Client Hub'))
+return View::make('client.client_profile',  array('pagetitle' => 'Client Hub'))
 //models for Client ID search
 			->with('clientlist', Clientlookup::findorFail($checkid))//get all the client data
-			->with('billingcompanies', Clientbillingindex::where('client_id', '=', $client_id)->get());
+			->with('billingcompanies', Clientbillingindex::where('client_id', '=', $client_id)->get())
+			->with('pagetitle', 'Client Hub');
 			
 		}
 
@@ -94,7 +95,8 @@ $checkid = DB::table('clientlists')->where('client_id', '=', $getid)->pluck('id'
 return View::make('client.client_profile',  array('pagetitle', 'Client Hub'))
 //models for Client ID search
 			->with('clientlist', Clientlookup::find($checkid))//get all the client data
-			->with('billingcompanies', Clientbillingindex::where('client_id', '=', $getid)->get());
+			->with('billingcompanies', Clientbillingindex::where('client_id', '=', $getid)->get())
+			->with('pagetitle', 'Client Hub');
 			
 		}
 

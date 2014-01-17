@@ -4,38 +4,32 @@
 
 <h1>
 
-	<form action="clients">
-			Clients
-	<input type="submit"></form>
-		<br>
-		<br>
-	<form action="billing">
-			Billing Information
-	<input type="submit"></form>
-		<br>
-		<br>	
+	<a href = ./clients>Clients</a>
 
-	<form action="worksite">
-			Worksites
-	<input type="submit"></form>
 		<br>
 		<br>
 
-	<form action="work_order">
-			Work Orders
-	<input type="submit"></form>
+	<a href = ./billing>Billing</a>
+
 		<br>
 		<br>
 
-	<form action="purchase_order">
-			Purchase Orders
-	<input type="submit"></form>
+	<a href = ./worksite>Worksites</a>
+
+		<br>
+		<br>
+	<a href = ./work_order>Work Orders</a>
+
 		<br>
 		<br>
 
-	<form action="services">
-			Services
-	<input type="submit"></form>
+	<a href = ./purchase_order>Purchase Orders</a>
+
+		<br>
+		<br>
+
+	<a href = ./services>Services</a>
+
 		<br>
 		<br>
 

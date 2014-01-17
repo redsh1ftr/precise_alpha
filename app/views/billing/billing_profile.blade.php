@@ -30,7 +30,7 @@
 
 	<form action="../clients/profile">
 		Add this Billing Contact to Client ID: <input type="text">
-	<input type="submit"><br></form>
+	<input type="submit"><br></form><br>
 	Current Clients:
 
 
