@@ -25,7 +25,7 @@ class CreateWorksiteList extends Migration {
 			$table->string('worksite_city');
 			$table->string('worksite_state');
 			$table->string('worksite_zip');
-			$table->string('access_info')
+			$table->string('access_info');
 			$table->longtext('worksite_notes');
 			$table->timestamps();
 
