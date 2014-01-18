@@ -19,11 +19,13 @@ class CreateWorksiteList extends Migration {
 			$table->string('contact_phone_number');
 			$table->string('contact_fax_number');
 			$table->string('contact_email');
+			$table->string('open_hours');
 			$table->string('worksite_street');
 			$table->string('worksite_street_1');
 			$table->string('worksite_city');
 			$table->string('worksite_state');
 			$table->string('worksite_zip');
+			$table->string('access_info')
 			$table->longtext('worksite_notes');
 			$table->timestamps();
 

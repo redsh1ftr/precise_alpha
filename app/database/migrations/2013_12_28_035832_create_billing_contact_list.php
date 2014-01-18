@@ -16,6 +16,7 @@ class CreateBillingContactList extends Migration {
 			$table->string('billing_company');
 			$table->string('first_name');
 			$table->string('last_name');
+			$table->string('open_hours')
 			$table->string('phone_number');
 			$table->string('fax_number');
 			$table->string('email');

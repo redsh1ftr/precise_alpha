@@ -53,12 +53,10 @@
 	</ul>
 @endforeach
 
+<br>
 
+	<a href = ".../billing">Add Another Billing Contact to this Client</a>
 
-	<a href = ".../billing">Add Billing Contact</a>
-	<form action="../billing">
-		Add another billing contact to client
-	<input type="submit"><br></form>
 
 
 	<h1><br>

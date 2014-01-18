@@ -5,35 +5,33 @@
 <h2>
 	Look up client by:<br><br>
 	<form action="clients/profile/id">
-		BY Client Number: 	<input type="text" name = "client_id">
+		Client Number: 	
+		<br>
+	<input type="text" name = "client_id">
 	<input type="submit"></form>
 
 	<form action="clients/profile/business_name">
-		BY Business Name: 	<input type="text" name = "business_name">
+		Business Name: 
+		<br>
+	<input type="text" name = "business_name">
 	<input type="submit"></form>
 
 	<form action="clients/profile/work_order">
-		BY Work Order #: 	<input type="text" name = "work_order_number">
+		Work Order #: 	
+		<br>
+	<input type="text" name = "work_order_number">
 	<input type="submit"></form>
-		
 
+	<form action="clients/profile/work_order">
+		Purchase Order #: 	
 		<br>
-		BY Billing Contact Name:
-		<br>
-		BY Worksite:
-		<br>
-		BY Work Order #:
-		<br>
-		BY Purchase Order#:
-		<br>
+	<input type="text" name = "purchase_order_number">
+	<input type="submit"></form><br><br>
 
-<form action="clients/new">
-		NEW Client: 	
-	<input type="submit"><br>
+
+		<a href = clients/new>New Client</a>
+
 
 </form
 </h2>
 @stop
-
-lookup_client<br>
-look up a client

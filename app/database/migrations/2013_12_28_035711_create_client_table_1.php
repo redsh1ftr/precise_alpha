@@ -17,10 +17,14 @@ class CreateClientTable1 extends Migration {
 			$table->string('business_name');
 			$table->string('business_type');
 			$table->string('net_terms');
-			$table->string('current_job_number');
+			$table->integer('current_job_number');
+			$table->string('open_hours');
 			$table->timestamps();
 
 		});
+
+
+		
 	}
 
 	/**
