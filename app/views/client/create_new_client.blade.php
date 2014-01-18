@@ -44,7 +44,8 @@
   	 	 <option value="Interior_Maintenance">Interior Maintenance</option>
 	  	 <option value="Exterior_Maintenance">Exterior Maintenance</option>
 	  	 <option value="Cleaning_1">Cleaning</option>
-		 </select> </TH>
+		 </select> 
+	  </TH>
 	  </TR>
 	  
 	  <TH>Billing Street:</TH>
