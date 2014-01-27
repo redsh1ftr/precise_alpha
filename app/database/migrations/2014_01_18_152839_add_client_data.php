@@ -19,8 +19,7 @@ class AddClientData extends Migration {
 				'net_terms' => '30',
 				'current_job_number' => '014',
 				'open_hours' => 'Monday - Friday 9-5, Saturday 10-3'
-				'created_at'=>date('Y-m-d H:m:s'),
-				'updated_at'=>date('Y-m-d H:m:s'),
+				
 			));
 
 		DB::table('client_list')->insert(array(
@@ -30,8 +29,7 @@ class AddClientData extends Migration {
 				'net_terms' => '30',
 				'current_job_number' => '009',
 				'open_hours' => 'Monday - Friday 9-5, Saturday 10-3'
-				'created_at'=>date('Y-m-d H:m:s'),
-				'updated_at'=>date('Y-m-d H:m:s'),
+				
 			));
 
 	}

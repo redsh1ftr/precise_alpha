@@ -15,11 +15,15 @@
 		<br>
 	Current Job Number:	{{	$clientlist->current_job_number	}}
 		<br>
-		Purchase Order Counter
-		<br>
 		{{	$clientlist->net_terms	}}
 		<br>
+		
 	</h2>
+		<h3>Hours:<br>
+		{{	$clientlist->open_hours}}
+		<h3>
+		<br>
+	
 
 
 

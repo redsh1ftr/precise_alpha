@@ -14,7 +14,7 @@ class CreateBillingIndex extends Migration {
 		Schema::create('billing_index', function($table){
 			$table->increments('id');
 			$table->integer('client_id');
-			$table->string('business_name')
+			$table->string('business_name');
 			$table->integer('billing_id');
 			$table->string('billing_company');
 			$table->timestamps();
