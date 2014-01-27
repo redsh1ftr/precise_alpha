@@ -22,7 +22,7 @@ public function clientProfilelookup($client_id){
 //get the main input from previoud page
 //$getid = Input::get('client_id');
 //make sure there's data there
-$checkid = DB::table('clientlists')->where('client_id', '=', $client_id)->pluck('id');
+$checkid = DB::table('client_list')->where('client_id', '=', $client_id)->pluck('id');
 return View::make('client.client_profile',  array('pagetitle' => 'Client Hub'))
 //models for Client ID search
 			->with('clientlist', Clientlookup::findorFail($checkid))//get all the client data
@@ -52,11 +52,11 @@ return View::make('client.client_profile',  array('pagetitle' => 'Client Hub'))
 //inputs from lookup page:
 //clientid isolation
 		//$checkclientid = Input::get('client_id');
-		$checkid = DB::table('clientlists')->where('client_id', '=', 'client_id')->pluck('id');
+		$checkid = DB::table('client_list')->where('client_id', '=', 'client_id')->pluck('id');
 
 //businessname isolation
 		//$checkbusinessname = Input::get('business_name');
-		$checkbusiness = DB::table('clientlists')->where('business_name', '=', 'business_name')->pluck('client_id');
+		$checkbusiness = DB::table('client_list')->where('business_name', '=', 'business_name')->pluck('client_id');
 
 //workorder isolation
 		//$clientlookup = Clientlookup::where('client_id', '=', 'client_id')->firstorFail();//get all the client data
@@ -91,7 +91,7 @@ public function clientProfilebyCID(){
 //get the main input from previoud page
 $getid = Input::get('client_id');
 //make sure there's data there
-$checkid = DB::table('clientlists')->where('client_id', '=', $getid)->pluck('id');
+$checkid = DB::table('client_list')->where('client_id', '=', $getid)->pluck('id');
 return View::make('client.client_profile',  array('pagetitle', 'Client Hub'))
 //models for Client ID search
 			->with('clientlist', Clientlookup::find($checkid))//get all the client data
@@ -105,7 +105,7 @@ public function clientProfilebyBusinessName($billing_company){
 //get the main input from previoud page
 $getid = Input::get($billing_company);
 //make sure there's data there, grab the UID
-$checkid = DB::table('clientlists')->where('business_name', '=', $getid)->pluck('id');
+$checkid = DB::table('client_list')->where('business_name', '=', $getid)->pluck('id');
 return View::make('client.client_profile',  array('pagetitle', 'Client Hub'))
 //models for Client ID search
 			->with('clientlist', Clientlookup::findorFail($checkid)->get())//get all the client data
