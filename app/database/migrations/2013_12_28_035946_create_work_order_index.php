@@ -15,7 +15,6 @@ class CreateWorkOrderIndex extends Migration {
 			$table->increments('id');
 			$table->integer('client_id');
 			$table->integer('work_order_id');
-			$table->string('work_order_status');
 			$table->timestamps();
 		});
 	}
